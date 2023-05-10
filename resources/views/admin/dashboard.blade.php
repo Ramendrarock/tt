@@ -1,13 +1,9 @@
-<h1>admin dashboard</h1>
-
-
-
-<form method="POST" action="{{ route('admin.logout') }}">
-                            @csrf
-
-                            <x-dropdown-link :href="route('admin.logout')"
-                                    onclick="event.preventDefault();
-                                                this.closest('form').submit();">
-                                {{ __('Log Out') }}
-                            </x-dropdown-link>
-                        </form>
+                @extends('admin.layouts.app')
+                @section('content')
+           
+                <!--Content --> 
+                <h1 style="text-align:center;  margin-top: 25px;" >Admin is Logged In!</h1>
+<!-- 
+                {{auth()->guard('admin')->user()}} -->
+            <!-- / Content --> 
+            @endsection

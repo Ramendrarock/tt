@@ -18,13 +18,13 @@ class RouteServiceProvider extends ServiceProvider
      * @var string
      */
     public const HOME = '/dashboard';
-    public const ADMIN_HOME = '/admin/dashboard';
+    public const Admin_HOME = '/admin/dashboard';
 
     /**
      * Define your route model bindings, pattern filters, and other route configuration.
      * 
      */
-    protected $namespace='App\\Http\\controllers';
+    protected $namespace = 'App\Http\Controllers';
     public function boot(): void
     {
         RateLimiter::for('api', function (Request $request) {
